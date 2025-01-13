@@ -14,7 +14,14 @@ public class LegoSet {
     private String name;
     private String description;
     private double price;
+    private String theme;
+    private String age;
+    private String imageUrl;
+    private int pieces;
+    private double rating; // Add this field
+    private String review; // Add this field
 
+    // Getters and setters for all fields
     public Long getId() {
         return id;
     }
@@ -45,5 +52,53 @@ public class LegoSet {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public String getTheme() {
+        return theme;
+    }
+
+    public void setTheme(String theme) {
+        this.theme = theme;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public int getPieces() {
+        return pieces;
+    }
+
+    public void setPieces(int pieces) {
+        this.pieces = pieces;
+    }
+
+    public double getRating() {
+        return rating;
+    }
+
+    public void setRating(double rating) {
+        this.rating = rating;
+    }
+
+    public String getReview() {
+        return review;
+    }
+
+    public void setReview(String review) {
+        this.review = review;
     }
 }
