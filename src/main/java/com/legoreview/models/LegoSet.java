@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import java.time.LocalDate;
 
 @Entity
 public class LegoSet {
@@ -18,10 +19,10 @@ public class LegoSet {
     private String age;
     private String imageUrl;
     private int pieces;
-    private double rating; // Add this field
-    private String review; // Add this field
+    private double rating;
+    private String review;
+    private LocalDate releaseDate; 
 
-    // Getters and setters for all fields
     public Long getId() {
         return id;
     }
@@ -100,5 +101,13 @@ public class LegoSet {
 
     public void setReview(String review) {
         this.review = review;
+    }
+
+    public LocalDate getReleaseDate() { 
+        return releaseDate;
+    }
+
+    public void setReleaseDate(LocalDate releaseDate) {
+        this.releaseDate = releaseDate;
     }
 }
