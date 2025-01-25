@@ -2,8 +2,11 @@ package com.legoreview.repository;
 
 import com.legoreview.models.LegoSet;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import java.time.LocalDate;
+import java.util.List;
 
-@Repository
 public interface LegoSetRepository extends JpaRepository<LegoSet, Long> {
+    List<LegoSet> findByTheme(String theme);
+
+    List<LegoSet> findByReleaseDateAfter(LocalDate releaseDate);
 }
